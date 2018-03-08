@@ -10,7 +10,7 @@ app = web.application(urls, globals())
 
 class home:
     def GET(self):
-        return JSONEncoder().encode({"foo": "bar"})
+        return json.dumps({"foo": "bar"})
 
 
 def POST(self):
