@@ -2,7 +2,7 @@
 import web
 
 urls = (
-    '/(.*)', 'home'
+    '/', 'home'
     '/(.*)', 'hello'
 
 )
