@@ -1,4 +1,4 @@
-import web
+import web, json
 
 urls = (
     '/arne', 'home'
@@ -10,15 +10,17 @@ app = web.application(urls, globals())
 
 class home:
     def GET(self):
-        return 'Hello, this is a GET'
+        return JSONEncoder().encode({"foo": "bar"})
 
-    def POST(self):
-        return 'Hello, this is a POST'
+
+def POST(self):
+    return 'Hello, this is a POST'
 
 
 class person():
     def __init__(self):
         self.name
+
     def getName(self):
         print("asd")
 
