@@ -1,28 +1,33 @@
 import web, json
 
 urls = (
-    '/arne', 'home'
-    # '/(.*)', 'hello'
-
+    '/(.*)', 'Home'
 )
+
 app = web.application(urls, globals())
 
 
-class home:
-    def GET(self):
-        return json.dumps({"foo": "bar"})
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
 
 
-def POST(self):
-    return 'Hello, this is a POST'
-
-
-class person():
+class Home:
     def __init__(self):
-        self.name
+        self.p = Person("Arne")
 
-    def getName(self):
-        print("asd")
+    def GET(self, var):
+        web.header('Content-Type', 'application/json')
+        if not var:
+            return json.dumps({"Name": "unknown"})
+        self.p.name = var
+        return json.dumps({"Name": self.p.name})
+
+    def POST(self, var):
+        return 'Hello, this is the POST method'
 
 
 if __name__ == "__main__":
