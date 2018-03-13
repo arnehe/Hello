@@ -17,7 +17,7 @@ class Person:
 
 class Home:
     def __init__(self):
-        self.p = Person("Arne")
+        self.p = Person("Onbekend")
 
     def GET(self, var):
         web.header('Content-Type', 'application/json')
@@ -31,5 +31,4 @@ class Home:
 
 
 if __name__ == "__main__":
-    app.run()
- 
+    app.run() 
