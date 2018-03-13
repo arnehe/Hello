@@ -17,7 +17,7 @@ class Person:
 
 class Home:
     def __init__(self):
-        self.p = Person("Onbekend")
+        self.p = Person("test")
 
     def GET(self, var):
         web.header('Content-Type', 'application/json')
